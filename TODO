@@ -1,0 +1,4 @@
+[x] Generate adapters for different scrappers (Commit messages, source code, issues)
+[x] Set the email and password as initialization variables
+[x] Set filter adapters
+[x] Set chromium executable location as a variable
