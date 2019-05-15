@@ -7,7 +7,7 @@ export class PBrowser {
     public width = 1480;
     public height = 1024;
     public headless = false;
-    public executablePath:string = path.relative('./', '/usr/bin/chromium');
+    public executablePath:string = path.relative('./', process.env.CHROMIUM_PATH || '/usr/bin/chromium');
     
     private constructor(){
 
