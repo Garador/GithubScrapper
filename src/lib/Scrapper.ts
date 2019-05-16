@@ -166,6 +166,7 @@ export default class Scrapper {
             }
             hasNextPage = !!nextPage;
         }
+        await browser.close();
         return accumulatedData;
     }
 

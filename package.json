@@ -9,6 +9,7 @@
     "lint": "tslint ./src/**/*.ts",
     "fix": "tslint --fix ./src/**/*.ts",
     "start": "ts-node src/index.ts"
+    ,"test":"mocha -r ts-node/register tests/*.ts"
   },
   "pre-commit": [
     "lint"
@@ -17,6 +18,8 @@
     "@types/node": "^10.12.18",
     "@types/puppeteer": "^1.11.1",
     "@types/request-promise": "^4.1.42",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
     "pre-commit": "^1.2.2",
     "prettier": "^1.15.3",
     "puppeteer": "^1.11.0",
@@ -27,7 +30,9 @@
     "typescript": "^3.2.2"
   },
   "dependencies": {
+    "@types/chai": "^4.1.7",
     "@types/dotenv": "^6.1.1",
+    "@types/mocha": "^5.2.6",
     "dotenv": "^7.0.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
