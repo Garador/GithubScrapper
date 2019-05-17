@@ -122,7 +122,7 @@ export default class Scrapper {
                             try{
                                 let title = element.querySelector(commit_title).textContent;
                                 let desc = element.querySelector(commit_description);
-                                let text = title + (desc ? "\n\nDESCRIPTION:\n"+desc.textContent : "")
+                                let text = "\nTITLE: \n"+title + (desc ? "\n\nDESCRIPTION:\n"+desc.textContent : "")
                                 texts.push(( < string > text));
                             }catch(e){
                                 texts.push(e)
@@ -146,7 +146,7 @@ export default class Scrapper {
                             try{
                                 let title = element.querySelector(commit_title).textContent;
                                 let desc = element.querySelector(commit_description);
-                                let text = title + (desc ? "\n\nDESCRIPTION:\n"+desc.textContent : "")
+                                let text = "\nTITLE: \n"+title + (desc ? "\n\nDESCRIPTION:\n"+desc.textContent : "")
                                 texts.push(( < string > text));
                             }catch(e){
                                 texts.push(e)
@@ -194,7 +194,7 @@ export default class Scrapper {
         }
         let resultsB = [];
         for(let i=0;i<rawResults.length;i++){
-            let filteredResult = await filterFunction(rawResults[0]);
+            let filteredResult = await filterFunction(rawResults[i]);
             if(filteredResult != null){
                 resultsB.push(filteredResult);
             }
