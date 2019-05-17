@@ -106,7 +106,7 @@ export default class Scrapper {
 
                         return {
                             text: texts,
-                            nextPage: document.querySelector(nextPageQS) ? nextPage : ( < any > document.querySelector(nextPageQS)).getAttribute("href")
+                            nextPage: document.querySelector(nextPageQS) ? ( < any > document.querySelector(nextPageQS)).getAttribute("href") : null
                         };
                     }, DEF_NEXT_PAGE_QSELECTOR.code, DEF_ELEMENT_QS.code);
 

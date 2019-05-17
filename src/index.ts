@@ -10,8 +10,8 @@ let email = <string>process.env.EMAIL, password = <string>process.env.PASSWORD;
 
 scrapper.setAuth(email,password)
 
-scrapper.extractScrap("Damn", undefined, undefined, SEARCH_TYPES.issues, async (result:string)=>{
-  let matchA = result.match(new RegExp(/\n.*Damn|fuck|hell.*\n/gi));
+scrapper.extractScrap("Green", undefined, undefined, SEARCH_TYPES.code, async (result:string)=>{
+  let matchA = result.match(new RegExp(/\n.*Green.*\n/gi));
   if(matchA){
     return matchA.join("");
   }
